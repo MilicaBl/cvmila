@@ -11,6 +11,7 @@ import { About } from './components/about/About';
 import { Competencies } from './components/competencies/Competencies';
 import { MyProjects } from './components/myProjects/MyProjects';
 import { Contact } from './components/contact/Contact';
+import { HashRouter } from "react-router-dom";
 
 // const root = ReactDOM.createRoot(
 //   document.getElementById('root') as HTMLElement
@@ -20,7 +21,7 @@ const root = ReactDOMClient.createRoot(container as Element);
 
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
     <Routes>
         <Route path="/" element={<Layout/>}> 
           <Route index element={<Home />}/>
@@ -31,7 +32,7 @@ root.render(
           <Route path="*" element={<NotFound/>}/>
         </Route>
   </Routes>
-  </BrowserRouter>
+  </HashRouter>
   </React.StrictMode>
 );
 
