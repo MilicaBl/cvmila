@@ -1,0 +1,51 @@
+body {
+    background-color: #F5F1EE;
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+.contactInfo span {
+    padding: 50px 0;
+}
+
+.location::before {
+    content: "location_on";
+    font-family: "Material Symbols Outlined";
+    -webkit-font-feature-settings: "liga" 1;
+    font-feature-settings: "liga" 1;
+    margin-right: 7px;
+    font-size: 2.5rem;
+    vertical-align: middle;
+}
+
+.phone::before {
+    content: "phonelink_ring";
+    font-family: "Material Symbols Outlined";
+    -webkit-font-feature-settings: "liga" 1;
+    font-feature-settings: "liga" 1;
+    margin-right: 7px;
+    font-size: 2.5rem;
+    vertical-align: middle;
+}
+
+.email::before {
+    content: "mail";
+    font-family: "Material Symbols Outlined";
+    -webkit-font-feature-settings: "liga" 1;
+    font-feature-settings: "liga" 1;
+    margin-right: 7px;
+    font-size: 2.5rem;
+    vertical-align: middle;
+}
+
+@media only screen and (max-width: 500px) {
+    .contactInfo {
+        font-size: 1.2rem;
+    }
+}

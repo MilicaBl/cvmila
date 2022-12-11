@@ -1,0 +1,27 @@
+body {
+    background-color: #F8F5F3;
+    color: #262626;
+}
+
+.headerFlex {
+    display: flex;
+    align-self: center;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+h1 {
+    font-size: 4rem;
+    text-align: center;
+    margin: 0;
+    padding: 40px 10px;
+    border-right: 1px solid black;
+}
+
+h2 {
+    font-size: 2rem;
+    padding-left: 10px;
+    padding-bottom: 20px
+}
+

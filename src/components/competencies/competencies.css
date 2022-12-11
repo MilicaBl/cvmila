@@ -1,0 +1,119 @@
+body {
+    background-color: #EBEDE8;
+}
+
+.flexGroup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    font-size: 1rem;
+}
+
+.flexItem {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.holder {
+    border: 1px solid #262626;
+    width: 12rem;
+    height: 1rem;
+    margin: 40px
+}
+
+.htmlFill {
+    height: 100%;
+    background-color: #262626;
+    width: 90%
+}
+
+.reactFill {
+    height: 100%;
+    background-color: #262626;
+    left: 0;
+    width: 60%
+}
+
+.angularFill {
+    height: 100%;
+    background-color: #262626;
+    left: 0;
+    width: 40%
+}
+
+.typescriptFill {
+    height: 100%;
+    background-color: #262626;
+    left: 0;
+    width: 50%
+}
+
+.wordpressFill {
+    height: 100%;
+    background-color: #262626;
+    left: 0;
+    width: 40%
+}
+
+.uxFill {
+    height: 100%;
+    background-color: #262626;
+    left: 0;
+    width: 50%
+}
+
+.cssFill {
+    height: 100%;
+    background-color: #262626;
+    left: 0;
+    width: 90%
+}
+
+.vanillajsFill {
+    height: 100%;
+    background-color: #262626;
+    left: 0;
+    width: 90%
+}
+
+.figmaFill {
+    height: 100%;
+    background-color: #262626;
+    left: 0;
+    width: 50%
+}
+
+.seoFill {
+    height: 100%;
+    background-color: #262626;
+    left: 0;
+    width: 60%
+}
+
+.mysqlFill {
+    height: 100%;
+    background-color: #262626;
+    left: 0;
+    width: 30%
+}
+
+.jqueryFill {
+    height: 100%;
+    background-color: #262626;
+    left: 0;
+    width: 20%
+}
+
+@media only screen and (max-width: 500px) {
+    .flexGroup {
+        flex-direction: column;
+        font-size: 0.8rem;
+        align-items: flex-end;
+    }
+
+    .holder {
+        margin: 20px;
+    }
+}
