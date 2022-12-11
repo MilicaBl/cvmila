@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/%7Bcvmila%7D/static/css/main.924fdba6.css",
-    "main.js": "/%7Bcvmila%7D/static/js/main.e72e5d95.js",
-    "static/js/787.6f350441.chunk.js": "/%7Bcvmila%7D/static/js/787.6f350441.chunk.js",
-    "index.html": "/%7Bcvmila%7D/index.html",
-    "main.924fdba6.css.map": "/%7Bcvmila%7D/static/css/main.924fdba6.css.map",
-    "main.e72e5d95.js.map": "/%7Bcvmila%7D/static/js/main.e72e5d95.js.map",
-    "787.6f350441.chunk.js.map": "/%7Bcvmila%7D/static/js/787.6f350441.chunk.js.map"
+    "main.css": "/cvmila/static/css/main.924fdba6.css",
+    "main.js": "/cvmila/static/js/main.ec2b7b88.js",
+    "static/js/787.6f350441.chunk.js": "/cvmila/static/js/787.6f350441.chunk.js",
+    "index.html": "/cvmila/index.html",
+    "main.924fdba6.css.map": "/cvmila/static/css/main.924fdba6.css.map",
+    "main.ec2b7b88.js.map": "/cvmila/static/js/main.ec2b7b88.js.map",
+    "787.6f350441.chunk.js.map": "/cvmila/static/js/787.6f350441.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.924fdba6.css",
-    "static/js/main.e72e5d95.js"
+    "static/js/main.ec2b7b88.js"
   ]
 }
