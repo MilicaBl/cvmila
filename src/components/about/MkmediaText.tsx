@@ -13,7 +13,7 @@ const MkmediaText = () => {
     omedelbart vara involverad i konkreta projekt. Jag fick också
     möjligheten att uppdatera serviceavtal och erbjuda insikt om
     användningen av React då de inte hade använt det tidigare och
-    önskade lära sig För att förklara konceptet höll jag en
+    önskade lära sig. För att förklara konceptet höll jag en
     informativ presentation om React för dem, vilket var både
     roligt och utmanande.
   </>
