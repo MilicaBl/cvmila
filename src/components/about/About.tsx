@@ -203,7 +203,7 @@ export function About() {
         <div className="lineImage" />
         <img
           className="cvImage"
-          src="./cv-color2.jpg"
+          src="./cvbild.jpg"
           width="300px"
           alt="Milica"
         />
