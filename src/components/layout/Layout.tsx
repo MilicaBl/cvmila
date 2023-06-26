@@ -1,15 +1,22 @@
 import React, { useEffect, useState } from "react";
-import { Link, NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
+import { useLocation } from 'react-router-dom';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./layout.css";
 
 export function Layout() {
+ 
+  const location = useLocation();
+  const query = location.pathname;
+  console.log(query)
   document.body.style.minHeight = "100vh";
   useEffect(() => {
     AOS.init();
   }, []);
-  const [ShowMenu, setShowMenu] = useState(false);
+
+ const [ShowMenu, setShowMenu] = useState(false);
+
   const openMenu = () => {
     setShowMenu(true);
   };
@@ -39,16 +46,16 @@ export function Layout() {
                 data-aos="fade-right"
                 data-aos-duration="1200"
               >
-                <li onClick={closeMenu}>
+                <li onClick={closeMenu} className={query=="/about" ? "activeLink" : "none"}>
                   <NavLink to={"/about"}>Om mig</NavLink>
                 </li>
-                <li onClick={closeMenu}>
+                <li onClick={closeMenu} className={query=="/competencies" ? "activeLink" : "none"}> 
                   <NavLink to={"/competencies"}>Kompetenser</NavLink>
                 </li>
-                <li onClick={closeMenu}>
+                <li onClick={closeMenu} className={query=="/myprojects" ? "activeLink" : "none"}>
                   <NavLink to={"/myprojects"}>Mina projekt</NavLink>
                 </li>
-                <li onClick={closeMenu}>
+                <li onClick={closeMenu} className={query=="/contact" ? "activeLink" : "none"}>
                   <NavLink to={"/contact"}>Kontakt</NavLink>
                 </li>
               </ul>

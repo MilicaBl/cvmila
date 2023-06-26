@@ -17,6 +17,7 @@ export function MyProjects() {
   const [hoverArgus, setHoverArgus] = useState(false);
   const [hoverRestaurant, setHoverRestaurant] = useState(false);
   const [hoverGridpainter, setHoverGridpainter] = useState(false);
+  const [hoverFabry, setHoverFabry] = useState(false);
   const toggleHoverFootprint = () => {
     setHoverFootprint(!hoverFootprint);
   };
@@ -28,6 +29,9 @@ export function MyProjects() {
   };
   const toggleHoverGridpainter = () => {
     setHoverGridpainter(!hoverGridpainter);
+  };
+  const toggleHoverFabry = () => {
+    setHoverFabry(!hoverFabry);
   };
   return (
     <React.Fragment>
@@ -49,31 +53,68 @@ export function MyProjects() {
         className="mySwiper"
       >
         <SwiperSlide
+          onMouseEnter={toggleHoverFabry}
+          onMouseLeave={toggleHoverFabry}
+        >
+          <a
+            href="https://hcp.rethinkfabry.se/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="/fabry.png" alt="rethinkfabry" />
+            {hoverFabry
+              ? <div
+                  className="hoverImgShow"
+                  data-aos="fade-up"
+                  data-aos-duration="1200"
+                >
+                  <h3>Rethinkfabry</h3>
+                  <p>
+                    En multisite där vi har data på WordPress och frontenden är
+                    byggd med Next.js. Det var ett stort projekt som jag gjorde
+                    under min andra LIA. Rethinkfabry kommer snart att finnas
+                    även på andra språk.
+                  </p>
+                </div>
+              : ""}
+          </a>
+        </SwiperSlide>
+        <SwiperSlide
           onMouseEnter={toggleHoverFootprint}
           onMouseLeave={toggleHoverFootprint}
         >
-          <img src="./footprint.png" alt="footprint"/>
-          {hoverFootprint
-            ? <div
-                className="hoverImgShow"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-              >
-                <h3>Kommer snart...</h3>
-                <p>
-                  Ett projekt jag jobbar med just nu på min nuvarande LIA plats.
-                  Det är en sida som har en webbshopp. Sidan ska få nytt fräscht
-                  utseende.
-                </p>
-              </div>
-            : ""}
+          <a
+            href="https://footprintrecords.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="./footprint.png" alt="footprint" />
+            {hoverFootprint
+              ? <div
+                  className="hoverImgShow"
+                  data-aos="fade-up"
+                  data-aos-duration="1200"
+                >
+                  <h3>Footprint records</h3>
+                  <p>
+                    Ett projekt jag gjorde på min första LIA. Det är en sida som
+                    har en webbshopp. Den är byggd i Wordpress och webbshoppen i
+                    WooCommerce. Sidan fick nytt fräscht utseende.
+                  </p>
+                </div>
+              : ""}
+          </a>
         </SwiperSlide>
         <SwiperSlide
           onMouseEnter={toggleHoverArgus}
           onMouseLeave={toggleHoverArgus}
         >
-          <a href="https://argusalternativ.se/" target="_blank"  rel="noopener noreferrer">
-            <img src="./argus.png" alt="argus alternativ"/>
+          <a
+            href="https://argusalternativ.se/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="./argus.png" alt="argus alternativ" />
 
             {hoverArgus
               ? <div
@@ -85,7 +126,7 @@ export function MyProjects() {
                   <p>
                     Mitt första LIA projekt. Sidan saknade mobilversion och vi
                     passade på att göra om designen lite. Sidan byggdes med
-                    hjälp av Wordpress och ACF. Jag använde Twig, PHP och
+                    hjälp av WordPress och ACF. Jag använde Twig, PHP och
                     jQuery.
                   </p>
                 </div>
@@ -98,9 +139,10 @@ export function MyProjects() {
         >
           <a
             href="https://saraekman.github.io/React-Restaurant/"
-            target="_blank"  rel="noopener noreferrer"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <img src="./restaurant.png" alt="Restaurang skolprojekt"/>
+            <img src="./restaurant.png" alt="Restaurang skolprojekt" />
             {hoverRestaurant
               ? <div
                   className="hoverImgShow"
@@ -125,8 +167,12 @@ export function MyProjects() {
           onMouseEnter={toggleHoverGridpainter}
           onMouseLeave={toggleHoverGridpainter}
         >
-          <a href="https://gridpainter.vercel.app/" target="_blank"  rel="noopener noreferrer">
-            <img src="./gridpainter.png" alt="gridpainter spel skolprojekt"/>
+          <a
+            href="https://gridpainter.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="./gridpainter.png" alt="gridpainter spel skolprojekt" />
             {hoverGridpainter
               ? <div
                   className="hoverImgShow"
@@ -143,7 +189,8 @@ export function MyProjects() {
                     backend. Mer om vilka paket vi använde kan ni läsa{" "}
                     <a
                       href="https://github.com/MilicaBl/gridpainter"
-                      target="_blank"  rel="noopener noreferrer"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="gridpainterLink"
                     >
                       här

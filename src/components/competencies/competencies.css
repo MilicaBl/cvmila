@@ -106,7 +106,7 @@ body {
     width: 20%
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 933px) {
     .flexGroup {
         flex-direction: column;
         font-size: 0.8rem;
@@ -114,6 +114,13 @@ body {
     }
 
     .holder {
-        margin: 20px;
+        margin: 20px 10px;
+
+    }
+
+    .holder .aos-animate {
+        transition-property: none !important;
+        transform: none !important;
+        animation: none !important;
     }
 }

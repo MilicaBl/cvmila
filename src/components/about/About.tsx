@@ -1,15 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./about.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-class Period {
-  year: string;
-  content: string;
-  constructor(year: string, content: string) {
-    this.year = year;
-    this.content = content;
-  }
-}
+import JobbText from "./JobbText";
+import MkmediaText from "./MkmediaText";
+import DfText from "./DfText";
+import AboutText from "./AboutText";
+import Funfact from "./Funfact";
+
 export function About() {
   useEffect(() => {
     AOS.init();
@@ -25,9 +23,14 @@ export function About() {
   const [showExpandText, setShowExpandText] = useState(false);
   const [showExpandTextTwo, setShowExpandTextTwo] = useState(false);
 
+  const [showExpandLia, setShowExpandLia] = useState(true);
+  const [showExpandLiaText, setShowExpandLiaText] = useState(false);
+
   const expandTwo = () => {
     setShowExpandTwo(false);
     setShowExpandTextTwo(true);
+    expandNot();
+    expandNotLia();
   };
   const expandNotTwo = () => {
     setShowExpandTwo(true);
@@ -36,11 +39,24 @@ export function About() {
   const expand = () => {
     setShowExpand(false);
     setShowExpandText(true);
+    expandNotLia();
+    expandNotTwo();
   };
   const expandNot = () => {
     setShowExpand(true);
     setShowExpandText(false);
   };
+  const expandLia = () => {
+    setShowExpandLia(false);
+    setShowExpandLiaText(true);
+    expandNot();
+    expandNotTwo();
+  };
+  const expandNotLia = () => {
+    setShowExpandLia(true);
+    setShowExpandLiaText(false);
+  };
+  const containerRef = useRef<HTMLLIElement | null>(null);
 
   useEffect(() => {
     function handleResize() {
@@ -75,13 +91,6 @@ export function About() {
         <ul className="timeLine">
           <li className="line" />
           <li className="period">
-            <span className="periodDot">2013</span>
-            <h3 className="periodText">
-              Hår & Makeup stylist <br /> Burgårdens utbildningscentrum, <br />{" "}
-              Göteborg
-            </h3>
-          </li>
-          <li className="period">
             <span className="periodDot">2018-2021</span>
             <h3 className="periodText">
               Säljare<br />DEICHMAN SKO AB
@@ -101,17 +110,13 @@ export function About() {
                 </span>}
             {showExpandTextTwo
               ? <p className="expandJobbText expandtext">
-                  <span>Augusti 2018 till Juli 2021</span>
-                  <br />
-                  <span>Vikarierade som biträdande butikschef i 6 månader</span>
-                  <br />
-                  <span>Vikarierade som dekoratör i 1 år</span>
-                  <br />
-                  Utförde alla förekommande butiks arbetsuppgifter.<br />
-                  Jag lärde mig mycket om att ta snabba beslut när <br />
-                  det behövs och lösa de flesta problem som dyker <br />
-                  upp under en arbetsdag. Jag bidrog med en god<br />
-                  arbetsmoral och härlig stämmning i butiken.
+                  {" "}<JobbText />{" "}
+                  <span
+                    className="material-symbols-outlined expandmobile"
+                    onClick={expandNotTwo}
+                  >
+                    close
+                  </span>{" "}
                 </p>
               : <div />}
           </li>
@@ -125,82 +130,83 @@ export function About() {
             <span className="periodDot">2022</span>
             <h3 className="periodText">Reste runt i Mexico</h3>
           </li>
-          <li className="period">
+          <li className="period container" ref={containerRef}>
             <span className="periodDot">2022</span>
             <h3 className="periodText">
               MKmedia produktion AB <br /> LIA - 10 veckor
             </h3>
             {showExpand
               ? <span
-                  className="material-symbols-outlined expand "
+                  className="material-symbols-outlined expand"
                   onClick={expand}
                 >
                   expand_more
                 </span>
               : <span
-                  className="material-symbols-outlined expand "
+                  className="material-symbols-outlined expand"
                   onClick={expandNot}
                 >
                   expand_less
                 </span>}
             {showExpandText
               ? <p className="expandLiaText expandtext">
-                  <span>November 2022 till december 2022</span>
+                  <MkmediaText />{" "}
+                  <span
+                    className="material-symbols-outlined expandmobile"
+                    onClick={expandNot}
+                  >
+                    close
+                  </span>
+                </p>
+              : <div />}
+          </li>
+          <li className="period">
+            <span className="periodDot">2022</span>
+            <h3 className="periodText">
+              Dear Friends <br /> LIA - 4 månader
+            </h3>
+            {showExpandLia
+              ? <span
+                  className="material-symbols-outlined expand "
+                  onClick={expandLia}
+                >
+                  expand_more
+                </span>
+              : <span
+                  className="material-symbols-outlined expand"
+                  onClick={expandNotLia}
+                >
+                  expand_less
+                </span>}
+            {showExpandLiaText
+              ? <p className="expandLiaText expandtext">
+                  <DfText />
                   <br />
-                  Lärde mig mycket om hur det fungerar på en webbyrå.<br />
-                  Jag fick jobba mycket med Wordpress(ACF),Twig och lite
-                  jQuerry.<br />
-                  Redan första veckan fick jag en kunds gammla sida att snygga
-                  till och <br />
-                  mobilanpassa vilket var superkul att få jobba direkt med
-                  skarpa projekt.<br />
-                  Jag lärde mig uppdatera serviceavtal. De använde inte react
-                  och ville
-                  <br />
-                  veta mer om det så jag höll i en "react presentation" för de
-                  vilket var<br />
-                  så roligt och utmanande.
+                  <span
+                    className="material-symbols-outlined expandmobile"
+                    onClick={expandNotLia}
+                  >
+                    close
+                  </span>
                 </p>
               : <div />}
           </li>
           <li className="period">
             <span className="periodDot">NU</span>
-            <h3 className="periodText">Söker min andra LIA</h3>
+            <h3 className="periodText">
+              Söker min första jobb som <br />Frond End Developer
+            </h3>
           </li>
         </ul>
-        <article>
-          <h3>Om mig</h3>
-          <p>
-            Enligt mig själv och andra som känner mig väl <br />är jag en
-            effektiv och ansvarsfull person som <br />fungerar mycket väl när
-            det gäller att jobba på <br /> egen hand eller i team.
-          </p>
-          <p>
-            Efter 5 år i handel branchen kände jag mig redo<br /> för nya
-            utmaningar. Jag valde att utbilda mig till<br /> en Front End
-            utvecklare då jag alltid har haft <br />intresse för webbsidor och
-            applikationer.<br />Intresset fångade den kreativa delen som jag{" "}
-            <br /> som besökaren såg men efter 2 år av utbildningen <br />insåg
-            jag att jag är en bra problemlösare och att <br />
-            utbildningen passar mig perfekt.
-          </p>
-          <div className="lineFunFacts" />
-        </article>
-        <article className="funFacts">
-          <h3>Lite mer om mig</h3>
-          <ul>
-            <li>
-              Jag älskar att resa och har besökt 20+ länder.<br /> Mitt mål är
-              att resa världen runt
-            </li>
-            <li>Gillar fotografi</li>
-            <li>Favoritmat -sushi</li>
-            <li>Intresserad av inredning</li>
-            <li>Har en katt Noel</li>
-          </ul>
-        </article>
+        <AboutText />
+        <Funfact />
         <div className="lineImage" />
-        <img className="cvImage" src="./cv-color2.jpg" width="300px" alt="Milica" />
+        <img
+          className="cvImage"
+          src="./cv-color2.jpg"
+          width="300px"
+          alt="Milica"
+        />
       </div>
     </React.Fragment>
   );

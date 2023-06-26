@@ -31,7 +31,7 @@
 }
 
 .periodText {
-    padding-top: 70px;
+    padding-top: 45px;
     line-height: 2rem;
     letter-spacing: 0.2rem;
     font-family: jaf-bernina-sans, sans-serif;
@@ -54,7 +54,8 @@
     display: flex;
     flex-direction: row;
     position: fixed;
-    margin-bottom: 30px;
+    margin-bottom: 100px;
+    margin-top: 70px;
     white-space: nowrap;
     align-items: center;
 }
@@ -76,8 +77,8 @@ li {
 }
 
 article {
-    padding-left: 50px;
-    width: 20%;
+    margin-left: 50px;
+    width: 650px;
     overflow: wrap;
     white-space: wrap;
     position: relative;
@@ -85,8 +86,8 @@ article {
 
 .lineFunFacts {
     height: 0.3rem;
-    left: 120%;
-    width: 100%;
+    left: 105%;
+    width: 85%;
     background-color: #262626;
     position: absolute;
     top: 50%;
@@ -119,6 +120,7 @@ article p {
     line-height: 2rem;
     letter-spacing: 0.2rem;
     padding: 20px 40px;
+    padding-right: 0;
     position: relative;
 }
 
@@ -169,25 +171,49 @@ article p {
     font-family: jaf-bernina-sans, sans-serif;
     font-weight: 300;
     font-style: normal;
-    line-height: 2rem;
+    line-height: 1.8rem;
     letter-spacing: 0.1rem;
     padding-left: 5%;
     position: absolute;
-    top: 150%
+    /* background-color: rgb(235, 230, 227); */
+    top: 115%;
+    width: 60%;
+    white-space: break-spaces;
+    /* width: 80vw;
+    height:80vh;
+    position: absolute;
+    background-color: aquamarine; */
 }
 
-.expandtext span {
+.expandtext .spanText {
     font-family: jaf-bernina-sans, sans-serif;
     font-style: italic;
     font-size: 0.8rem;
     font-weight: 600;
 }
 
-@media only screen and (max-width: 500px) {
+.expandmobile {
+    display: none;
+}
+
+@media only screen and (max-width: 963px) {
     .expandtext {
         font-size: 0.9rem;
-        top: 120%;
+        top: -80%;
         line-height: 1.3rem;
+        background-color: #BBBFB6;
+        width: 90vw;
+        padding-left: 0;
+        padding: 10px 20px;
+        z-index: 9;
+        border-radius: 5%;
+        border: 1px solid black;
+        min-height: 60vh;
+    }
+
+    .expandtext span {
+        display: inline-block;
+        margin-bottom: 10px;
     }
 
     article p,
@@ -199,6 +225,7 @@ article p {
 
     .funFacts ul li {
         padding: 10px 40px;
+        padding-right: 0;
     }
 
     .period h3 {
@@ -207,9 +234,34 @@ article p {
 
     .offsetContainer {
         margin-bottom: 50px;
+        margin-top: 90px
+    }
+
+    article h3 {
+        padding-bottom: 0;
     }
 
     .periodText {
         padding-top: 40px;
+    }
+
+    article {
+        width: 400px;
+    }
+
+    article p {
+        padding-bottom: 0px;
+    }
+
+    .lineFunFacts {
+        width: 110%;
+    }
+
+    .expandmobile {
+        display: block;
+        z-index: 10;
+        font-size: 2rem;
+        cursor: pointer;
+        margin: 20px;
     }
 }

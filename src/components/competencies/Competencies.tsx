@@ -19,7 +19,7 @@ export function Competencies() {
             </div>
           </div>
           <div className="react flexItem">
-            <h3>React</h3>
+            <h3>React/Next.js</h3>
             <div className="holder">
               <div
                 className="reactFill"
@@ -49,7 +49,7 @@ export function Competencies() {
             </div>
           </div>
           <div className="wordpress flexItem">
-            <h3>Wordpress</h3>
+            <h3>Wordpress/DatoCMS</h3>
             <div className="holder">
               <div
                 className="wordpressFill"

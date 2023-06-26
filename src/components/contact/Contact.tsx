@@ -13,7 +13,7 @@ export function Contact() {
       <h2 className="contactH2" >Kontakta mig</h2>
       <div className="contactInfo">
         <span className="location">Göteborg</span>
-        <span className="phone"><a href="tel:+13174562564">3076-1364241</a></span>
+        <span className="phone"><a href="tel:+46761364241">076-1364241</a></span>
         <span className="email"><a href="mailto:milab.code@gmail.com">milab.code@gmail.com</a></span>
       </div>
     </React.Fragment>

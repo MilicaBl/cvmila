@@ -28,7 +28,7 @@ root.render(
           <Route path="/about" element={<About />}/>
           <Route path="/competencies" element={<Competencies />}/>
           <Route path="/myprojects" element={<MyProjects />}/>
-          <Route path="contact" element={<Contact />}/>
+          <Route path="/contact" element={<Contact />}/>
           <Route path="*" element={<NotFound/>}/>
         </Route>
   </Routes>
