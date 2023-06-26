@@ -61,7 +61,7 @@ export function MyProjects() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="/fabry.png" alt="rethinkfabry" />
+            <img src="./fabry.png" alt="rethinkfabry" />
             {hoverFabry
               ? <div
                   className="hoverImgShow"
