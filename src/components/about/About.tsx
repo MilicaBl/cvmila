@@ -63,8 +63,6 @@ export function About() {
       setW(window.innerWidth);
       setOffset(w / 2 - (window.pageYOffset + 132));
     }
-    console.log("min", w);
-    console.log(offset);
     window.addEventListener("resize", handleResize);
   });
 

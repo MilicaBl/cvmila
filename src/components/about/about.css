@@ -79,8 +79,6 @@ li {
 article {
     margin-left: 50px;
     width: 650px;
-    overflow: wrap;
-    white-space: wrap;
     position: relative;
 }
 
@@ -106,6 +104,7 @@ article p {
     font-family: jaf-bernina-sans, sans-serif;
     font-weight: 300;
     font-style: normal;
+    white-space: pre-wrap;
 }
 
 .funFacts {

@@ -239,9 +239,13 @@ a {
     .line3 {
         width: 20px;
     }
-
+    main h2{
+    padding-right: 10px;
+    width: min-content;
+    }
     footer {
         height: auto;
-        padding: 0 0 0 30px;
+        padding: 30px;
+        padding-bottom: 0;
     }
 }
