@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/cvmila/static/css/main.1066fb9d.css",
-    "main.js": "/cvmila/static/js/main.01bd1658.js",
+    "main.css": "/cvmila/static/css/main.8439a22f.css",
+    "main.js": "/cvmila/static/js/main.098383b2.js",
     "static/js/787.6f350441.chunk.js": "/cvmila/static/js/787.6f350441.chunk.js",
     "index.html": "/cvmila/index.html",
-    "main.1066fb9d.css.map": "/cvmila/static/css/main.1066fb9d.css.map",
-    "main.01bd1658.js.map": "/cvmila/static/js/main.01bd1658.js.map",
+    "main.8439a22f.css.map": "/cvmila/static/css/main.8439a22f.css.map",
+    "main.098383b2.js.map": "/cvmila/static/js/main.098383b2.js.map",
     "787.6f350441.chunk.js.map": "/cvmila/static/js/787.6f350441.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1066fb9d.css",
-    "static/js/main.01bd1658.js"
+    "static/css/main.8439a22f.css",
+    "static/js/main.098383b2.js"
   ]
 }
